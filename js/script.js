@@ -42,3 +42,25 @@ showSlide(currentSlide);
 
 // Auto-advance slides every 5 seconds
 setInterval(nextSlide, 5000);
+
+//include
+document.addEventListener('DOMContentLoaded', function() {
+    includeHTML('header', '../layout/header.html');
+});
+
+function includeHTML(targetElementId, filePath) {
+    fetch(filePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(targetElementId).innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Błąd podczas wczytywania pliku:', error);
+            document.getElementById(targetElementId).innerHTML = 'Nie udało się załadować zawartości.';
+        });
+}
