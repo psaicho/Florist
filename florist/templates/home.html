@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  {% include "header.html" %}
+
+    <div id="header"></div>
+
+    <div class="slider">
+        <div class="slide">
+            <img src="{% static 'florist/img/slider-i-1.webp' %}" alt="Beautiful Roses">
+            <h2>Elegant Roses</h2>
+        </div>
+        <div class="slide">
+            <img src="{% static 'florist/img/slider-i-10.webp' %}" alt="Colorful Tulips">
+            <h2>Spring Tulips</h2>
+        </div>
+        <div class="slide">
+            <img src="{% static 'florist/img/slider-i-22.webp' %}" alt="Exotic Orchids">
+            <h2>Exotic Orchids</h2>
+        </div>
+        <div id="dotContainer"></div>
+    </div>
+
+    <main>
+        <h1>Welcome to Blooming Blossoms</h1>
+        <p>Discover the beauty of nature with our exquisite flower arrangements.</p>
+    </main>
+    <script src="{% static 'florist/js/script.js' %}" defer></script>
+  {% include "footer.html" %}
+{% endblock %}
