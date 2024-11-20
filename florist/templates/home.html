@@ -3,7 +3,7 @@
 
 {% block content %}
   {% include "header.html" %}
-
+    <script src="{% static 'florist/js/home.js' %}" ></script>
     <div id="header"></div>
 
     <div class="slider">
@@ -26,6 +26,6 @@
         <h1>Welcome to Blooming Blossoms</h1>
         <p>Discover the beauty of nature with our exquisite flower arrangements.</p>
     </main>
-    <script src="{% static 'florist/js/script.js' %}" defer></script>
+
   {% include "footer.html" %}
 {% endblock %}

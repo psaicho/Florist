@@ -48,16 +48,6 @@ showSlide(currentSlide);
 setInterval(nextSlide, 5000);
 
 
-document.addEventListener('DOMContentLoaded', function() {
-
-    //include
-    includeHTML('header', './layout/header.html');
- 
-});
-
-
-
-
 //include
 function includeHTML(targetElementId, filePath) {
     console.log('Próba załadowania:', filePath);
