@@ -1,8 +1,4 @@
-
-
-
 // Slider functionality
-
 const slides = document.querySelectorAll('.slide');
 const dotContainer = document.getElementById('dotContainer');
 let currentSlide = 0;
@@ -48,23 +44,4 @@ showSlide(currentSlide);
 setInterval(nextSlide, 5000);
 
 
-//include
-function includeHTML(targetElementId, filePath) {
-    console.log('Próba załadowania:', filePath);
-    fetch(filePath)
-        .then(response => {
-            console.log('Odpowiedź otrzymana:', response.status);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            console.log('Dane otrzymane, długość:', data.length);
-            document.getElementById(targetElementId).innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Błąd podczas wczytywania pliku:', error);
-            document.getElementById(targetElementId).innerHTML = 'Nie udało się załadować zawartości.';
-        });
-}
+
