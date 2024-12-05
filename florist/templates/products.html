@@ -1,6 +1,8 @@
 {% extends "base.html" %}
-{% block content %}
 {% load static %}
+{% block content %}
+{% include "header.html" %}
+
 <link rel="stylesheet" href="{% static 'css/products.css' %}">
 
 <form method="POST">
@@ -17,13 +19,17 @@
         <tr>
             <td><input type="checkbox" name="select_{{ flower.id }}" value="1"></td>
             <td>{{ flower.name }}</td>
-            <td>${{ flower.price }}</td>
-            <td><input type="number" name="quantity_{{ flower.id }}" min="1" value="1" class="quantity-input"></td>
+            <td class="price-column">${{ flower.price }}</td>
+            <td class="quantity-controls">
+                <button type="button" class="quantity-btn minus">-</button>
+                <input type="number" name="quantity_{{ flower.id }}" min="1" value="1" class="quantity-input" readonly>
+                <button type="button" class="quantity-btn plus">+</button>
+            </td>
         </tr>
         {% endfor %}
     </table>
 
-    <h2>Compositions</h2>
+    <h2>Flower Compositions</h2>
     <table>
         <tr>
             <th>Select</th>
@@ -35,24 +41,56 @@
         <tr>
             <td><input type="checkbox" name="select_{{ comp.id }}" value="1"></td>
             <td>{{ comp.name }}</td>
-            <td>${{ comp.price }}</td>
-            <td><input type="number" name="quantity_{{ comp.id }}" min="1" value="1" class="quantity-input"></td>
+            <td class="price-column">${{ comp.price }}</td>
+            <td class="quantity-controls">
+                <button type="button" class="quantity-btn minus">-</button>
+                <input type="number" name="quantity_{{ comp.id }}" min="1" value="1" class="quantity-input" readonly>
+                <button type="button" class="quantity-btn plus">+</button>
+            </td>
         </tr>
         {% endfor %}
     </table>
 
-    <button type="submit">Calculate Total</button>
+    <button type="submit" class="calculate-btn">Calculate Total</button>
 </form>
 
 {% if selected_items %}
 <div class="summary">
-    <h3>Selected Items:</h3>
-    <ul>
-    {% for item in selected_items %}
-        <li>{{ item.name }} - ${{ item.price }} x {{ item.quantity }} = ${{ item.total }}</li>
-    {% endfor %}
-    </ul>
-    <h3>Total Price: ${{ total_price }}</h3>
+    <div class="selected-items-header">Selected Items:</div>
+    <div class="selected-items-list">
+        {% for item in selected_items %}
+            <div class="selected-item">
+                {{ item.name }} - ${{ item.price }} x {{ item.quantity }} = ${{ item.total }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="total-price">
+        <span>Total Price:</span> ${{ total_price }}
+    </div>
 </div>
 {% endif %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quantityControls = document.querySelectorAll('.quantity-controls');
+
+    quantityControls.forEach(control => {
+        const minusBtn = control.querySelector('.minus');
+        const plusBtn = control.querySelector('.plus');
+        const input = control.querySelector('.quantity-input');
+
+        minusBtn.addEventListener('click', () => {
+            const currentValue = parseInt(input.value);
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            const currentValue = parseInt(input.value);
+            input.value = currentValue + 1;
+        });
+    });
+});
+</script>
 {% endblock %}
