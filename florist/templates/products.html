@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+
+<form method="POST">
+    {% csrf_token %}
+    <h2>Single Flowers</h2>
+    <table>
+        <tr>
+            <th>Select</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for flower in single_flowers %}
+        <tr>
+            <td><input type="checkbox" name="select_{{ flower.id }}" value="1"></td>
+            <td>{{ flower.name }}</td>
+            <td>${{ flower.price }}</td>
+            <td><input type="number" name="quantity_{{ flower.id }}" min="1" value="1" class="quantity-input"></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Compositions</h2>
+    <table>
+        <tr>
+            <th>Select</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for comp in compositions %}
+        <tr>
+            <td><input type="checkbox" name="select_{{ comp.id }}" value="1"></td>
+            <td>{{ comp.name }}</td>
+            <td>${{ comp.price }}</td>
+            <td><input type="number" name="quantity_{{ comp.id }}" min="1" value="1" class="quantity-input"></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <button type="submit">Calculate Total</button>
+</form>
+
+{% if selected_items %}
+<div class="summary">
+    <h3>Selected Items:</h3>
+    <ul>
+    {% for item in selected_items %}
+        <li>{{ item.name }} - ${{ item.price }} x {{ item.quantity }} = ${{ item.total }}</li>
+    {% endfor %}
+    </ul>
+    <h3>Total Price: ${{ total_price }}</h3>
+</div>
+{% endif %}
+{% endblock %}

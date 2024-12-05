@@ -1,0 +1,498 @@
+[
+    {
+        "model": "florist.category",
+        "pk": 1,
+        "fields": {
+            "name": "Cut Flowers",
+            "description": "Single flowers"
+        }
+    },
+    {
+        "model": "florist.category",
+        "pk": 2,
+        "fields": {
+            "name": "Compositions",
+            "description": "Ready-made bouquets and arrangements"
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 1,
+        "fields": {
+            "name": "Red Rose",
+            "description": "Beautiful red rose, perfect for romantic occasions",
+            "price": "10.99",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 2,
+        "fields": {
+            "name": "White Lily",
+            "description": "Elegant white lily symbolizing purity",
+            "price": "11.99",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 3,
+        "fields": {
+            "name": "Yellow Tulip",
+            "description": "Cheerful yellow tulip for spring arrangements",
+            "price": "12.99",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 4,
+        "fields": {
+            "name": "Pink Carnation",
+            "description": "Classic pink carnation for any occasion",
+            "price": "13.99",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 5,
+        "fields": {
+            "name": "Purple Iris",
+            "description": "Majestic purple iris with unique petals",
+            "price": "14.99",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 6,
+        "fields": {
+            "name": "Orange Gerbera",
+            "description": "Vibrant orange gerbera daisy",
+            "price": "15.99",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 7,
+        "fields": {
+            "name": "Blue Delphinium",
+            "description": "Tall blue delphinium stem",
+            "price": "16.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 8,
+        "fields": {
+            "name": "White Chrysanthemum",
+            "description": "Traditional white chrysanthemum",
+            "price": "17.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 9,
+        "fields": {
+            "name": "Pink Peony",
+            "description": "Luxurious pink peony bloom",
+            "price": "18.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 10,
+        "fields": {
+            "name": "Red Anthurium",
+            "description": "Exotic red anthurium flower",
+            "price": "19.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 11,
+        "fields": {
+            "name": "Yellow Sunflower",
+            "description": "Bright yellow sunflower",
+            "price": "20.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 12,
+        "fields": {
+            "name": "Purple Orchid",
+            "description": "Elegant purple orchid stem",
+            "price": "21.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 13,
+        "fields": {
+            "name": "White Rose",
+            "description": "Classic white rose",
+            "price": "22.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 14,
+        "fields": {
+            "name": "Pink Lily",
+            "description": "Fragrant pink lily",
+            "price": "23.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 15,
+        "fields": {
+            "name": "Orange Rose",
+            "description": "Unique orange rose variety",
+            "price": "24.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 16,
+        "fields": {
+            "name": "Blue Hydrangea",
+            "description": "Fresh blue hydrangea stem",
+            "price": "25.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 17,
+        "fields": {
+            "name": "Red Tulip",
+            "description": "Traditional red tulip",
+            "price": "26.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 18,
+        "fields": {
+            "name": "White Gerbera",
+            "description": "Pure white gerbera daisy",
+            "price": "27.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 19,
+        "fields": {
+            "name": "Yellow Iris",
+            "description": "Sunny yellow iris flower",
+            "price": "28.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 20,
+        "fields": {
+            "name": "Purple Rose",
+            "description": "Rare purple rose variety",
+            "price": "29.990000000000002",
+            "category": 1,
+            "is_composition": false,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 21,
+        "fields": {
+            "name": "Wedding Bouquet Classic",
+            "description": "Traditional white and pink rose wedding bouquet",
+            "price": "91.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 22,
+        "fields": {
+            "name": "Spring Joy",
+            "description": "Colorful spring flower arrangement",
+            "price": "93.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 23,
+        "fields": {
+            "name": "Romantic Evening",
+            "description": "Red roses with white lilies arrangement",
+            "price": "95.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 24,
+        "fields": {
+            "name": "Birthday Surprise",
+            "description": "Mixed gerbera and carnation bouquet",
+            "price": "97.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 25,
+        "fields": {
+            "name": "Sympathy Arrangement",
+            "description": "White lily and chrysanthemum composition",
+            "price": "99.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 26,
+        "fields": {
+            "name": "Valentine's Special",
+            "description": "Dozen red roses with greenery",
+            "price": "101.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 27,
+        "fields": {
+            "name": "Mother's Day Bouquet",
+            "description": "Pink and purple mixed flower arrangement",
+            "price": "103.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 28,
+        "fields": {
+            "name": "Graduation Success",
+            "description": "Yellow and white celebration bouquet",
+            "price": "105.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 29,
+        "fields": {
+            "name": "Business Welcome",
+            "description": "Professional office flower arrangement",
+            "price": "107.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 30,
+        "fields": {
+            "name": "Garden Fresh",
+            "description": "Mixed seasonal flower bouquet",
+            "price": "109.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 31,
+        "fields": {
+            "name": "Summer Breeze",
+            "description": "Bright summer flowers composition",
+            "price": "111.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 32,
+        "fields": {
+            "name": "Autumn Colors",
+            "description": "Fall-themed flower arrangement",
+            "price": "113.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 33,
+        "fields": {
+            "name": "Winter Wonder",
+            "description": "White and blue winter composition",
+            "price": "115.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 34,
+        "fields": {
+            "name": "Tropical Paradise",
+            "description": "Exotic flowers arrangement",
+            "price": "117.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 35,
+        "fields": {
+            "name": "Sweet Memory",
+            "description": "Pastel colors mixed bouquet",
+            "price": "119.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 36,
+        "fields": {
+            "name": "Royal Purple",
+            "description": "Luxury purple flowers arrangement",
+            "price": "121.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 37,
+        "fields": {
+            "name": "Golden Sunset",
+            "description": "Orange and yellow flowers mix",
+            "price": "123.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 38,
+        "fields": {
+            "name": "Pink Cloud",
+            "description": "Soft pink flowers arrangement",
+            "price": "125.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 39,
+        "fields": {
+            "name": "Ocean Breeze",
+            "description": "Blue and white flowers mix",
+            "price": "127.99000000000001",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    },
+    {
+        "model": "florist.product",
+        "pk": 40,
+        "fields": {
+            "name": "Forest Fresh",
+            "description": "Green and white arrangement",
+            "price": "129.99",
+            "category": 2,
+            "is_composition": true,
+            "available": true
+        }
+    }
+]
