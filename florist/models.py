@@ -11,5 +11,5 @@ class Contact_Model(models.Model):
     message = models.CharField(max_length=1000)
     phone = models.CharField(max_length=10)
     email = models.EmailField()
-    still_actual = models.BooleanField()
+    still_actual = models.BooleanField(default=True)
 
