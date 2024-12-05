@@ -110,18 +110,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
 
 
+STATIC_URL = '/static/'  # Dodaj ukośnik na początku
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'florist', 'static'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
-
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
