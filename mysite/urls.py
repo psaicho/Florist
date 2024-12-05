@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    path("", include('florist.urls')),
     path('admin/', admin.site.urls),
     path('florist/', include('florist.urls')),
 ]

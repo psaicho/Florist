@@ -4,9 +4,7 @@
 
 {% block content %}
   {% include "header.html" %}
-    <script src="{% static 'js/home.js' %}" ></script>
-
-
+    <script src="{% static 'js/home.js' %}" defer></script>
     <div class="slider">
         <div class="slide">
             <img src="{% static 'img/slider-i-1.webp' %}" alt="Beautiful Roses">
@@ -21,6 +19,7 @@
             <h2>Exotic Orchids</h2>
         </div>
         <div id="dotContainer"></div>
+
     </div>
 
     <main>
