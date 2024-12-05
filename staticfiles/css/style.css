@@ -1,7 +1,11 @@
 :root {
+    /* Zmienne dla trybu jasnego */
     --bg-color: #ffffff;
     --text-color: #333333;
     --header-bg: #f0f0f0;
+    --dot-bg: rgba(0, 0, 0, 0.5);
+    --slide-title-bg: rgba(0, 0, 0, 0.5);
+    --slide-title-color: #ffffff;
 }
 
 body {
@@ -10,7 +14,7 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s ease;
 }
 
 header {
@@ -34,6 +38,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .slider {
@@ -66,8 +71,8 @@ nav ul li a {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--slide-title-color);
+    background-color: var(--slide-title-bg);
     padding: 10px;
 }
 
@@ -75,12 +80,6 @@ main {
     padding: 2rem;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    --bg-color: #333333;
-    --text-color: #ffffff;
-    --header-bg: #222222;
-}
 #dotContainer {
     position: absolute;
     bottom: 20px;
@@ -93,7 +92,7 @@ body.dark-mode {
 .dot {
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--dot-bg);
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
@@ -101,5 +100,15 @@ body.dark-mode {
 }
 
 .dot.active {
-    background-color: white;
+    background-color: var(--slide-title-color);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #2d2d2d;
+    --dot-bg: rgba(255, 255, 255, 0.5);
+    --slide-title-bg: rgba(0, 0, 0, 0.7);
+    --slide-title-color: #ffffff;
 }
