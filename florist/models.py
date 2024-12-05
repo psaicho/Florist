@@ -1,7 +1,7 @@
 from django.db import models
 import uuid
 
-class Contact_Model(models.Model):
+class Contact(models.Model):
     id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
