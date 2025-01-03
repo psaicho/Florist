@@ -112,3 +112,58 @@ body.dark-mode {
     --slide-title-bg: rgba(0, 0, 0, 0.7);
     --slide-title-color: #ffffff;
 }
+
+/* about */
+.floral-nook-body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.main-header {
+    text-align: center;
+    border-bottom: 2px solid #ff69b4;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.shop-title {
+    color: #ff69b4;
+}
+
+.section-title {
+    color: #20b2aa;
+}
+
+.intro-section,
+.specialties-section,
+.mission-section,
+.invitation-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.specialties-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.specialty-item::before {
+    content: "🌸 ";
+}
+
+.eco-friendly-section {
+    background-color: #e6ffe6;
+    border-left: 5px solid #4caf50;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+

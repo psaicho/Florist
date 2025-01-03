@@ -1,0 +1,111 @@
+:root {
+    --header-bg: #f0f0f0;
+    --text-color: #231f20;
+    --button-bg: #ffffff;
+    --button-text: #231f20;
+    --button-hover-bg: #ccb086;
+    --button-active-bg: #ccb086;
+    --button-border: #231f20;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--header-bg);
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu-trigger {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    color: var(--text-color);
+}
+
+.menu-items {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    background-color: var(--header-bg);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 0;
+    transition: max-width 0.5s ease-out;
+}
+
+.menu-trigger:hover + .menu-items,
+.menu-items:hover {
+    max-width: 1000px;
+}
+
+.menu-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-items li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-trigger:hover + .menu-items li,
+.menu-items:hover li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-items li a {
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.button-side {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--button-border);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.button-side:hover,
+.button-side.active {
+    background-color: var(--button-hover-bg);
+    color: var(--text-color);
+}
+
+#darkModeToggle {
+    margin-left: auto;
+    padding: 10px 15px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--button-border);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover,
+#darkModeToggle.active {
+    background-color: var(--button-hover-bg);
+}

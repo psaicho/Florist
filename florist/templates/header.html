@@ -1,13 +1,16 @@
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/menu.css' %}">
 <header>
     <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'products' %}">Products</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
+        <div class="menu-trigger">Menu</div>
+        <div class="menu-items">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
-
+    <button id="darkModeToggle">Dark Mode</button>
 </header>
